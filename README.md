@@ -1,3 +1,46 @@
+# radiomics-lstm-based-detector-
+### Written by Kaustav Banerjee
+
+---
+
+## 📌 Overview
+This project uses radiomic features from longitudinal MRI scans and an LSTM model to capture how tumors evolve over time, instead of treating each scan independently.
+
+---
+
+## 📊 Dataset Description
+
+The dataset (`radiomics_36features.csv`) contains radiomic features extracted from MRI scans of glioma patients across multiple timepoints.
+
+### Key Characteristics:
+- ~93 samples
+- 36 radiomic features per scan
+- Longitudinal structure (multiple scans per patient)
+
+### Important Columns:
+- **Patient ID** → Identifies individual patients  
+- **Timepoint** → Indicates scan stage (baseline / follow-up)  
+- **Radiomic Features** → Quantitative descriptors of tumor  
+
+### Feature Types:
+- **First-order statistics** → Intensity-based features  
+- **Texture features**:
+  - GLCM (Gray Level Co-occurrence Matrix)
+  - GLRLM (Gray Level Run Length Matrix)
+  - GLSZM (Gray Level Size Zone Matrix)
+  - NGTDM (Neighborhood Gray Tone Difference Matrix)
+
+These features capture:
+- Tumor heterogeneity  
+- Shape and structure  
+- Intensity variations  
+
+---
+
+## ⚙️ Code Description
+
+The implementation is provided below.
+
 # ================================
 # Necessary Imports
 # ================================
